@@ -43,8 +43,8 @@ before_install:
   - unzip translation.zip
   #convert translation files to json
   - go get github.com/rodcorsi/mattermosti18n/...
-  - po2i18n -t ${SRCROOT}/mattermost-webapp/i18n/en.json -o ${SRCROOT}/mattermost-webapp/i18n/${lang}.json web_static.po
-  - po2i18n -t ${SRCROOT}/mattermost-server/i18n/en.json -o ${SRCROOT}/mattermost-server/i18n/${lang}.json platform.po
+  - po2i18n -t ${SRCROOT}/mattermost-webapp/i18n/en.json -o ${SRCROOT}/mattermost-webapp/i18n/${lang}.json ${lang}-mattermost/${lang}/mattermost/web_static.po
+  - po2i18n -t ${SRCROOT}/mattermost-server/i18n/en.json -o ${SRCROOT}/mattermost-server/i18n/${lang}.json ${lang}-mattermost/${lang}/mattermost/platform.po
   
 script:
   - make build -C "${SRCROOT}/mattermost-webapp"

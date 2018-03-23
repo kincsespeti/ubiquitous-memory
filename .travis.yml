@@ -37,7 +37,7 @@ before_install:
   # download & extract mattermost-webapp
   - wget -q "https://github.com/kincsespeti/mattermost-webapp/archive/v${V}.tar.gz" -O mattermost-webapp.tar.gz
   - tar -C "${SRCROOT}/mattermost-webapp" --strip-components=1 -xf mattermost-webapp.tar.gz
-  #download Hungarian translation files
+  #download translation files
   - wget -q "https://translate.mattermost.com/export/?path=/${lang}/mattermost/" -O translation.zip
   - unzip translation.zip
   #convert translation files to json
